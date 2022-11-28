@@ -5,17 +5,18 @@ import { Header } from "./components/Header";
 import BGDark from "./assets/BGDark.svg";
 import Icon from "./assets/icon1.svg";
 import Photo from "./assets/photo.svg";
+import { CardTodoList } from "./components/CardTodoList";
 
 function App() {
   return (
-    <Flex direction="column" h="100vh">
+    <Flex direction="column" h="100vh" py={4} px={120}>
       <Header />
 
-      <HStack px="12" py={22} justify="space-between" align="center">
+      <HStack py="55px" justify="space-between" align="center">
         <Flex direction="column">
           <Text fontSize="80px" fontWeight={700} lineHeight="64px">
             Organize
-            <Text fontSize="60px" fontWeight={400} color="green.300" px={0}>
+            <Text fontSize="60px" fontWeight={400} color="green.300">
               your daily jobs
             </Text>
           </Text>
@@ -35,8 +36,8 @@ function App() {
           </Button>
         </Flex>
 
-        <Img src={Icon} h={600} position="absolute" right={-10} zIndex={-1} />
-        <Img src={Photo} h={400} position="revert" />
+        <Img src={Icon} h={700} position="absolute" right={-10} zIndex={-1} />
+        <Img src={Photo} h={500} position="revert" />
       </HStack>
 
       <Flex
@@ -48,6 +49,8 @@ function App() {
         align="center"
         color="white"
         bgImage={BGDark}
+        bgRepeat="no-repeat"
+        bgSize={"100%"}
       >
         <Text
           fontSize="60px"
@@ -65,6 +68,8 @@ function App() {
           when done and create what's new.
         </Text>
       </Flex>
+
+      <CardTodoList />
     </Flex>
   );
 }

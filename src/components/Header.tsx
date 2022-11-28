@@ -7,11 +7,9 @@ export function Header() {
     <Flex
       as="header"
       w="100%"
-      maxWidth={1480}
       h="20"
       mx="auto"
-      mt="4"
-      px="12"
+      mt={8}
       align="center"
       justify="space-between"
       bg="transparent"
