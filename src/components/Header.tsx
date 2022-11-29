@@ -8,7 +8,6 @@ export function Header() {
       as="header"
       w="100%"
       h="20"
-      mx="auto"
       mt={8}
       align="center"
       justify="space-between"
