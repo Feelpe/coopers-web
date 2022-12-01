@@ -17,11 +17,18 @@ export const theme = extendTheme({
     },
     blue: {
       "900": "#06152B"
+    },
+    gray: {
+      "400": "#9499B3"
     }
   },
   fonts: {
     heading: "Montserrat",
     body: "Montserrat",
+  },
+  shadows: {
+    md: '6px 6px 22px 8px rgba(66, 66, 66, 0.18)',
+    lg: '0px 6px 22px 14px rgba(66, 66, 66, 0.18)'
   },
   styles: {
     global: {
