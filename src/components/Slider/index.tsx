@@ -9,7 +9,47 @@ import { CardSlider } from "./CardSlider";
 
 export const Slider = () => {
   return (
-    <Carousel>
+    <Carousel
+      showThumbs={false}
+      showArrows={false}
+      showStatus={false}
+      centerMode
+      centerSlidePercentage={12}
+      renderIndicator={(onClickHandler, isSelected, index, label) => {
+        const defStyle = {
+          marginLeft: 20,
+          width: "30px",
+          height: "30px",
+          borderRadius: "100px",
+          cursor: "pointer",
+          background: "#C4C4C4",
+        };
+        const style = isSelected
+          ? { ...defStyle, background: "#4AC959" }
+          : { ...defStyle };
+        return (
+          <button
+            key={index}
+            style={style}
+            role="button"
+            onClick={onClickHandler}
+            onKeyDown={onClickHandler}
+            tabIndex={0}
+            aria-label={`${label} ${index + 1}`}
+          >
+            {index}
+          </button>
+        );
+      }}
+    >
+      <CardSlider img={painter}>
+        Mark one activity as done makes your brain understands the power of
+        doing.
+      </CardSlider>
+      <CardSlider img={dress}>
+        Careful with misunderstanding the difference between a list of things
+        and a list of desires.
+      </CardSlider>
       <CardSlider img={mac}>
         Organize your daily job enhance your life performance
       </CardSlider>
@@ -20,6 +60,9 @@ export const Slider = () => {
       <CardSlider img={dress}>
         Careful with misunderstanding the difference between a list of things
         and a list of desires.
+      </CardSlider>
+      <CardSlider img={mac}>
+        Organize your daily job enhance your life performance
       </CardSlider>
     </Carousel>
   );

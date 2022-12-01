@@ -117,13 +117,13 @@ function App() {
       </Flex>
 
       <VStack
-        w="100%"
+        w="80%"
         h="520px"
         p={16}
         my={6}
         mx={20}
         rounded={3}
-        justify="flex-start"
+        align="flex-start"
         bg="green.300"
       >
         <Text
