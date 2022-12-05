@@ -15,6 +15,7 @@ import BGDark from "./assets/BGDark.svg";
 import Icon from "./assets/icon1.svg";
 import Photo from "./assets/photo.svg";
 import { CheckboxStyled } from "./components/Checkbox/Checkbox";
+import { ContactForm } from "./components/ContactForm";
 import { Slider } from "./components/Slider";
 
 function App() {
@@ -136,6 +137,7 @@ function App() {
         </Text>
         <Slider />
       </VStack>
+      <ContactForm />
     </Flex>
   );
 }
